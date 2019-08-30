@@ -4,7 +4,7 @@
 #
 Name     : mvn-json-smart
 Version  : 1.1.1
-Release  : 3
+Release  : 4
 URL      : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1-sources.jar
 Source0  : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1-sources.jar
 Source1  : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1.jar
@@ -14,7 +14,8 @@ Source4  : https://repo1.maven.org/maven2/net/minidev/json-smart/1.3.1/json-smar
 Source5  : https://repo1.maven.org/maven2/net/minidev/json-smart/2.3/json-smart-2.3.jar
 Source6  : https://repo1.maven.org/maven2/net/minidev/json-smart/2.3/json-smart-2.3.pom
 Source7  : https://repo1.maven.org/maven2/net/minidev/minidev-parent/2.3/minidev-parent-2.3.pom
-Source8  : https://repo1.maven.org/maven2/net/minidev/parent/1.3.1/parent-1.3.1.pom
+Source8  : https://repo1.maven.org/maven2/net/minidev/parent/1.1.1/parent-1.1.1.pom
+Source9  : https://repo1.maven.org/maven2/net/minidev/parent/1.3.1/parent-1.3.1.pom
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0
@@ -32,6 +33,7 @@ data components for the mvn-json-smart package.
 
 
 %prep
+%setup -q -n META-INF
 
 %build
 
@@ -60,8 +62,11 @@ cp %{SOURCE6} %{buildroot}/usr/share/java/.m2/repository/net/minidev/json-smart/
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/minidev/minidev-parent/2.3
 cp %{SOURCE7} %{buildroot}/usr/share/java/.m2/repository/net/minidev/minidev-parent/2.3/minidev-parent-2.3.pom
 
+mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.1.1
+cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.1.1/parent-1.1.1.pom
+
 mkdir -p %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.3.1
-cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.3.1/parent-1.3.1.pom
+cp %{SOURCE9} %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.3.1/parent-1.3.1.pom
 
 
 %files
@@ -77,4 +82,5 @@ cp %{SOURCE8} %{buildroot}/usr/share/java/.m2/repository/net/minidev/parent/1.3.
 /usr/share/java/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.jar
 /usr/share/java/.m2/repository/net/minidev/json-smart/2.3/json-smart-2.3.pom
 /usr/share/java/.m2/repository/net/minidev/minidev-parent/2.3/minidev-parent-2.3.pom
+/usr/share/java/.m2/repository/net/minidev/parent/1.1.1/parent-1.1.1.pom
 /usr/share/java/.m2/repository/net/minidev/parent/1.3.1/parent-1.3.1.pom
