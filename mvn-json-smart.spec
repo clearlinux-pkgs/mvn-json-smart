@@ -4,7 +4,7 @@
 #
 Name     : mvn-json-smart
 Version  : 1.1.1
-Release  : 4
+Release  : 5
 URL      : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1-sources.jar
 Source0  : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1-sources.jar
 Source1  : https://repo1.maven.org/maven2/net/minidev/json-smart/1.1.1/json-smart-1.1.1.jar
